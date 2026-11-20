@@ -27,10 +27,8 @@ In Claude Code, add this repository as a marketplace and install the plugin:
 /plugin install visual-expert@visual-expert-tools
 ```
 
-The repository is private: you need to be invited to it, and git on your machine must be able to reach GitHub
-without prompting (e.g. `gh auth login` and `gh auth setup-git`, or Git Credential Manager). If the SSH check fails, set
-the environment variable `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1`, or add it by URL:
-`/plugin marketplace add https://github.com/bruce-armstrong/visual-expert-claude.git`.
+If adding by `owner/repo` fails with an SSH error, set the environment variable `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1`,
+or add it by URL: `/plugin marketplace add https://github.com/bruce-armstrong/visual-expert-claude.git`.
 
 To get updates later: `/plugin marketplace update visual-expert-tools`.
 
