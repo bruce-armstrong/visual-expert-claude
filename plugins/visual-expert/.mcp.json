@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "visual-expert": {
+      "command": "python",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/server/launcher.py"],
+      "env": {
+        "VE_VENV_DIR": "${CLAUDE_PLUGIN_DATA}/venv",
+        "VE_BASE_URL": "${user_config.base_url}",
+        "VE_AUTH": "${user_config.auth}",
+        "VE_EMAIL": "${user_config.email}",
+        "VE_PASSWORD": "${user_config.password}",
+        "VE_COOKIE": "${user_config.cookie}",
+        "VE_PROJECT": "${user_config.project}",
+        "VE_ANALYSIS_ID": "${user_config.analysis}",
+        "VE_VERIFY_TLS": "${user_config.verify_tls}"
+      }
+    }
+  }
+}

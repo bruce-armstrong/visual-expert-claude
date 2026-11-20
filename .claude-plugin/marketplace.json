@@ -1,0 +1,12 @@
+{
+  "name": "visual-expert-tools",
+  "owner": { "name": "Bruce Armstrong" },
+  "description": "Claude Code plugins for Visual Expert static code analysis.",
+  "plugins": [
+    {
+      "name": "visual-expert",
+      "source": "./plugins/visual-expert",
+      "description": "List, explain, fix and triage Visual Expert Code Inspection findings from Claude Code."
+    }
+  ]
+}

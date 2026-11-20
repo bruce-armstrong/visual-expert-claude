@@ -1,0 +1,60 @@
+{
+  "name": "visual-expert",
+  "version": "0.2.0",
+  "description": "List, explain, fix and triage Visual Expert Code Inspection findings (defects) from Claude Code.",
+  "author": { "name": "Bruce Armstrong" },
+  "keywords": ["visual-expert", "powerbuilder", "static-analysis", "code-inspection"],
+  "userConfig": {
+    "base_url": {
+      "type": "string",
+      "title": "Visual Expert URL",
+      "description": "Base URL of your Visual Expert web server, e.g. https://visualexpert.mycompany.local or https://demo.visual-expert.com",
+      "required": true
+    },
+    "auth": {
+      "type": "string",
+      "title": "Sign-in method",
+      "description": "windows = your Windows logon (no password stored); form = email + password; cookie = paste a browser Cookie header",
+      "options": ["windows", "form", "cookie"],
+      "default": "form"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email (form sign-in)",
+      "description": "Visual Expert login email. Leave empty for Windows sign-in.",
+      "default": ""
+    },
+    "password": {
+      "type": "string",
+      "title": "Password (form sign-in)",
+      "description": "Visual Expert password. Stored in your OS credential store. Leave empty for Windows sign-in.",
+      "sensitive": true,
+      "default": ""
+    },
+    "cookie": {
+      "type": "string",
+      "title": "Cookie header (cookie sign-in)",
+      "description": "Only for cookie sign-in: the Cookie request header copied from a signed-in browser.",
+      "sensitive": true,
+      "default": ""
+    },
+    "project": {
+      "type": "string",
+      "title": "Default project",
+      "description": "Optional. Project name or id (the number after /codeinspection/ in the URL). You can also pick one in chat.",
+      "default": ""
+    },
+    "analysis": {
+      "type": "string",
+      "title": "Analysis",
+      "description": "'latest' follows the newest analysis automatically. Enter an analysis id only to pin an older one.",
+      "default": "latest"
+    },
+    "verify_tls": {
+      "type": "boolean",
+      "title": "Verify TLS certificate",
+      "description": "Turn off only for an on-prem server with a self-signed certificate.",
+      "default": true
+    }
+  }
+}
