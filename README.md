@@ -23,9 +23,16 @@ analysis** of the chosen project, so you never need to paste a new URL after an 
 In Claude Code, add this repository as a marketplace and install the plugin:
 
 ```
-/plugin marketplace add <git URL or folder path of this repository>
+/plugin marketplace add bruce-armstrong/visual-expert-claude
 /plugin install visual-expert@visual-expert-tools
 ```
+
+The repository is private: you need to be invited to it, and git on your machine must be able to reach GitHub
+without prompting (e.g. `gh auth login` and `gh auth setup-git`, or Git Credential Manager). If the SSH check fails, set
+the environment variable `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1`, or add it by URL:
+`/plugin marketplace add https://github.com/bruce-armstrong/visual-expert-claude.git`.
+
+To get updates later: `/plugin marketplace update visual-expert-tools`.
 
 Claude Code then asks for the settings below. The password is stored in your operating system's secure credential store,
 not in a settings file. To change them later: `/plugin configure visual-expert@visual-expert-tools`.
