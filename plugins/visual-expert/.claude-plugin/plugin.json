@@ -3,6 +3,8 @@
   "version": "0.2.0",
   "description": "List, explain, fix and triage Visual Expert Code Inspection findings (defects) from Claude Code.",
   "author": { "name": "Bruce Armstrong" },
+  "license": "MIT",
+  "repository": "https://github.com/bruce-armstrong/visual-expert-claude",
   "keywords": ["visual-expert", "powerbuilder", "static-analysis", "code-inspection"],
   "userConfig": {
     "base_url": {
